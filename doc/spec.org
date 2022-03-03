@@ -1,0 +1,59 @@
+#+TITLE: Szerver oldali JS házi feladat specifikáció
+
+
+
+* Az oldal célja
+Az oldal célja, hogy a felhasználók át tudják látni mennyit költenek üzemanyagra, hol tankolnak, és hogy hány km van az autóban.
+* Oldalak
+** Home
+*** Funkciók
+- Kilistázza az autókat amit tárol az adatbázis.
+- Hozzáadhatunk új autókat.
+- Ha egy listaelemre kattintunk kinyitja a hozzá tartozó autó adatlapját (Autó nézet)
+*** Mockup
+[[./home.png]]
+** Autó nézet
+*** Funkciók
+- Látjuk az autóhoz tartozó képet.
+- Az autóhoz tudunk új tankolást felvenni.
+- Az autót tudjuk szerkeszteni.
+- A múltbeli tankolásokat látjuk egy listában, az autótól jobbra.
+*** Mockup
+[[./car.png]]
+** Szerkesztő nézet
+
+*** Funkciók
+- Autó nevének megváltoztatása.
+- Autó rendszámának megváltoztatása.
+- Új kép feltöltése.
+- Az autó törlése a rendszerből.
+- Mentés.
+- Változtatások elvetése.
+
+*** Mockup
+[[./car_edit.png]]
+
+** Tankolás hozzáadása
+
+*** Funkciók
+- Tankolás helyének megadása.
+- Tankolás mennyiségének megadása.
+- Üzemanyag egységár megadása.
+- Mentés, elvetés.
+*** Mockup
+[[./fillup.png]]
+
+* Adatmodell
+
+** Autó
+- Név (Bömbi)
+- Rendszám (BMW-001)
+- Kép
+- Tankolások (több:1 kapcsolat a tankolásokkal)
+
+  A név és rendszám mezőkből 1 kötelező, a másik opcionális.
+** Tankolás
+- Hely (MOL Váci út)
+- Tankolt mennyiség (32 l)
+- Egységár (479.9 Ft/l)
+- Autó (1:több kapcs az autóval ami a tankolást végezte)
